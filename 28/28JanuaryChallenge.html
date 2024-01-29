@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="config.js" defer></script>
+    <style>
+      
+      .compose{
+    transition: ease-out 0.5s;
+}
+
+.profileImg{
+ display: grid ;
+}
+
+.profileImg > * {
+    grid-area: 1/1;
+  }
+
+  .message {
+
+  
+      z-index: 1;
+
+      position: relative;
+
+
+      transition: all 250ms;
+      overflow: hidden;
+  }
+
+
+
+
+  .message:hover::before {
+      width: 100%;
+
+  }
+
+ 
+  .message::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+   
+      background-color: #d6d6dd;
+      z-index: -1;
+
+      transition: all 250ms
+  }
+
+
+  .follow::before {
+     
+       
+    transition: all 0.5s;
+    animation:  go 0.5s linear forwards;
+
+  }
+ 
+   @keyframes go {
+    from{
+
+    }
+    to{
+        width: 100%;
+    }
+
+   }
+ 
+  .follow::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+   
+      background-color: #14cf81;
+    
+      z-index: -1;
+
+      transition: all 250ms
+  }
+
+  .follow1::before {
+     
+       
+     transition: all 0.5s;
+     animation:  go 0.5s linear forwards;
+ 
+   }
+  
+    @keyframes go {
+     from{
+ 
+     }
+     to{
+         width: 100%;
+     }
+ 
+    }
+  
+   .follow1::before {
+       content: "";
+       position: absolute;
+       top: 0;
+       left: 0;
+       height: 100%;
+       width: 0;
+    
+       background-color: #cf5f14;
+       z-index: -1;
+ 
+       transition: all 250ms
+   }
+
+   .follow2::before {
+     
+       
+     transition: all 0.5s;
+     animation:  go 0.5s linear forwards;
+ 
+   }
+  
+    @keyframes go {
+     from{
+ 
+     }
+     to{
+         width: 100%;
+     }
+ 
+    }
+  
+   .follow2::before {
+       content: "";
+       position: absolute;
+       top: 0;
+       left: 0;
+       height: 100%;
+       width: 0;
+    
+       background-color: #14cf81;
+       z-index: -1;
+ 
+       transition: all 250ms
+   }
+
+   .follow3::before {
+     
+       
+     transition: all 0.5s;
+     animation:  go 0.5s linear forwards;
+ 
+   }
+  
+    @keyframes go {
+     from{
+ 
+     }
+     to{
+         width: 100%;
+     }
+ 
+    }
+  
+   .follow3::before {
+       content: "";
+       position: absolute;
+       top: 0;
+       left: 0;
+       height: 100%;
+       width: 0;
+    
+       background-color: #c4d1cc;
+       z-index: -1;
+ 
+       transition: all 250ms
+   }
+
+
+    </style>
+   
+</head>
+
+<body class="flex  items-center justify-center min-h-screen bg-gray-100">
+    
+    <div class="bg-white p-4 rounded-lg">
+        <h4 class="p-2 mr-20">Your messages</h4>
+        <div class="flex flex-col rounded-lg">
+          <button class="p-2 hover:bg-blue-950 rounded-lg border-2 border-blue-950 transition duration-500 flex flex-row items-center justify-center group hover:transition hover:duration-500">
+            <p class="group-hover:text-white group-hover:mr-2 hover:transition hover:duration-500 compose py-2">Compose</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 group-hover:text-white hidden group-hover:inline hover:transition hover:duration-500">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
+              </svg>
+              
+          </button>
+          <div class="flex flex-col p-2">
+           <div class="flex flex-row gap-2 rounded-lg hover:bg-gray-200 transition duration-500 p-2 message " id="s-0">
+            <div class="profileImg">
+                <img src="https://images.unsplash.com/photo-1483909796554-bb0051ab60ad?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lybCUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D" alt="" class="rounded-full w-10 h-10">
+                <div class="rounded-full w-4 h-4 bg-green-500 ml-7 border-2 border-white animate-pulse"></div>
+            </div> 
+             <div class="">
+                <p ><span class="font-bold text-blue-950">Rafel Jay </span>  <span class="text-sm text-gray-400 ml-36">4 days ago</span></p>
+                <p class="py-2 text-gray-600 font-semibold">Hi there how are you?</p>
+               
+             </div>
+            
+             
+           </div>
+           <div class="flex flex-row gap-2 rounded-lg hover:bg-gray-200 transition duration-500 p-2 message s-2" id="s-1">
+            <div class="profileImg">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGhvdG8lMjBkdSUyMHZpc2FnZXxlbnwwfHwwfHx8MA%3D%3D" alt="" class="rounded-full w-10 h-10">
+                <div class="rounded-full w-4 h-4 bg-orange-500 ml-7 border-2 border-white animate-pulse"></div>
+            </div> 
+             <div class="">
+                <p ><span class="font-bold text-blue-950">Frank Johnson</span>  <span class="text-sm text-gray-400 ml-[6.7rem]">4 days ago</span></p>
+                <p class="py-2 text-gray-600 font-semibold">How was the trip?</p>
+               
+             </div>
+            
+             
+           </div>
+           <div class="flex flex-row gap-2 rounded-lg hover:bg-gray-200 transition duration-500 p-2 message s-3" id="s-2">
+            <div class="profileImg">
+                <img src="https://images.unsplash.com/photo-1524502397800-2eeaad7c3fe5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGhvdG8lMjBkdSUyMHZpc2FnZXxlbnwwfHwwfHx8MA%3D%3D" alt="" class="rounded-full w-10 h-10">
+                <div class="rounded-full w-4 h-4 bg-green-500 ml-7 border-2 border-white animate-pulse"></div>
+            </div> 
+             <div class="">
+                <p ><span class="font-bold text-blue-950">Ashley Pierce</span>  <span class="text-sm text-gray-400 ml-28 ">4 days ago</span></p>
+                <p class="py-2 text-gray-600 font-semibold">I hope you are well</p>
+               
+             </div>
+            
+             
+           </div>
+           <div class="flex flex-row gap-2 rounded-lg hover:bg-gray-200 transition duration-500 p-2 message s-4" id="s-3">
+            <div class="profileImg">
+                <img src="https://images.unsplash.com/photo-1469460340997-2f854421e72f?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="rounded-full w-10 h-10">
+                <div class="rounded-full w-4 h-4 bg-gray-500 ml-7 border-2 border-white animate-pulse"></div>
+            </div> 
+             <div class="">
+                <p ><span class="font-bold text-blue-950">Nancy Mayer </span>  <span class="text-sm text-gray-400 ml-[7.3rem]">4 days ago</span></p>
+                <p class="py-2 text-gray-600 font-semibold">Thank you for answering</p>
+               
+             </div>
+            
+             
+           </div>
+          </div>
+        </div>
+    </div>
+ 
+</body>
