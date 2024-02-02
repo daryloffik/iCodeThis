@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="config2.js" ></script>
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(223, 193, 193);
+        }
+        .back{
+            background-color: rgb(194, 163, 163);
+        }
+
+        .front{
+            background-color: rgb(236, 222, 222);
+         opacity: 0;
+            
+        }
+
+        .groups{
+            display: grid;
+        }
+
+        .groups>*{
+        grid-area: 1/1;
+        }
+        
+        button{
+z-index: 1;
+
+position: relative;
+
+
+transition: all 250ms;
+overflow: hidden;
+}
+
+.shadow{
+    transition: all 250ms;
+    box-shadow: rgb(180, 157, 125) 15px 12px 9px;
+  }
+
+
+
+button:hover::before {
+width: 100%;
+
+}
+
+button::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 0;
+
+background-color: #000000;
+z-index: -1;
+
+transition: all 250ms
+}
+
+.active{
+    animation: scale-up 0.8s ease-in-out forwards;
+}
+
+@keyframes scale-up {
+    from {
+        opacity: 0;
+     
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+        
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+    <div class="groups max-w-lg md:max-w-xl message  w-full absolute ml-20">
+        <div class="w-[58%] h-96 back rounded-xl z-0 ">
+
+        </div>
+        <div class="front p-10  ml-12 mt-8 rounded-xl w-fit  z-50">
+        <h3 class="flex flex-row text-sm mb-2">ABOUT THE COMMUNITY <span class="ml-5"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+          </svg>
+          </span></h3>
+          <h4 class="text-xl font-medium mb-2">Blender Renders</h4>
+          <p class="">
+          A place where beginners Blender <br>artists can post their creations <br>and get feedback on.
+          </p>
+          <div class="flex flex-row gap-5 mt-5">
+            <div>
+              <p class="font-semibold text-xl">13.5K</p> 
+              <span>members</span>
+            </div>
+            <div>
+                <p class="font-semibold text-xl">47</p> 
+                <span>online</span>
+              </div>
+          </div>
+          <div class="flex flex-row gap-5 w-full mt-2 mb-3">
+           <button type="button" class="border border-2 border-black rounded-lg  px-5 p-2  flex items-center justify-center hover:text-white">joined</button>
+           <button type="button" class="border border-2 border-black rounded-lg px-5 p-2 hover:text-white">Create post</button>
+          </div>
+          <p class="text-sm text-gray-500 mt-5">Created Feb 7,2021</p>
+        </div>
+    </div>
+  
+</body>
+</html>
