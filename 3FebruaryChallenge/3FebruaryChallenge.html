@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      
+      .gridElement:hover{
+        animation: trans 1.5s ease-in-out infinite;
+        transition: all 250ms;
+       
+      }
+      @keyframes trans {
+        0%{
+          transform: translateY(-5px)
+        }
+        50%{
+          transform: translateY(5px);
+        } 
+        100%{
+          transform: translateY(-5px);
+        }
+      }
+
+      .Design:hover{
+        background-image: linear-gradient(to bottom right,rgb(6, 182, 212), #e9d5ff );
+        transition-duration: 0.4s;
+         color: whitesmoke;
+      }
+
+
+      .Engineering:hover{
+        background-image: linear-gradient(to bottom right, #f9a8d4, #fbcfe8 );
+        transition-duration: 0.4s;
+         color: whitesmoke;
+      }
+
+      .Operations:hover{
+        background-image: linear-gradient(to bottom right,rgb(172, 216, 223), #e9d5ff );
+        transition-duration: 0.4s;
+         color: whitesmoke;
+      }
+
+      .People:hover{
+        background-image: linear-gradient(to bottom right,#8cfaed, #e9d5ff );
+        transition-duration: 0.4s;
+         color: whitesmoke;
+
+      }
+
+
+      .University:hover{
+        background-image: linear-gradient(to bottom right,  #fbcfe8, rgb(6, 182, 212) );
+        transition-duration: 0.4s;
+         color: whitesmoke;
+      }
+    </style>
+    <title>
+     
+    </title>
+  </head>
+  <body class="flex flex-col items-center justify-center min-h-screen bg-slate-50">
+    <p class="text-2xl font-semibold mb-10 times">Open Positions</p>
+   <div class="lg:grid lg:grid-rows-2 lg:grid-cols-3 flex flex-col gap-5 ">
+    <div class="bg-white rounded-xl p-5 py-10 shadow-xl Design gridElement  items-center justify-center">
+      <div class="flex flex-row gap-2 items-center justify-center">
+     <div class="flex items-center justify-center bg-gradient-to-br from-blue-300  to-purple-200 p-2 rounded-lg">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42" />
+      </svg>
+     </div>
+     <p class="font-medium text-lg">Design</p>
+      </div>
+       <button class="font-medium p-2 px-8 mt-3 rounded-lg border-2  hover:text-white hover:bg-blue-950  transition duration-500">4 Open Positions</button>
+    </div>
+   
+    <div class="bg-white rounded-xl p-5 py-10 shadow-xl Engineering gridElement  items-center justify-center">
+      <div class="flex flex-row gap-2 items-center justify-center">
+     <div class="flex items-center justify-center bg-gradient-to-br from-pink-300  to-pink-200 p-2 rounded-lg">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+      </svg>
+      
+     </div>
+     <p class="font-medium text-lg">Engineering</p>
+      </div>
+       <button class="font-medium p-2 px-8 mt-3 rounded-lg border-2  hover:text-white hover:bg-blue-950  transition duration-500">8 Open Positions</button>
+    </div>
+    
+    <div class="bg-white rounded-xl p-5 py-10 shadow-xl Operations gridElement  items-center justify-center">
+      <div class="flex flex-row gap-2 items-center justify-center">
+     <div class="flex items-center justify-center bg-gradient-to-br from-blue-200  to-purple-200 p-2 rounded-lg">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+      </svg>
+      
+     </div>
+     <p class="font-medium text-lg">Operations</p>
+      </div>
+       <button class="font-medium p-2 px-8 mt-3 rounded-lg border-2  hover:text-white hover:bg-blue-950  transition duration-500">2 Open Positions</button>
+    </div>
+
+    <div class="bg-white rounded-xl p-5 py-10 shadow-xl People gridElement  items-center justify-center">
+      <div class="flex flex-row gap-2 items-center justify-center">
+     <div class="flex items-center justify-center bg-gradient-to-br from-[#8cfaed] to-purple-200 p-2 rounded-lg">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+      </svg>
+      
+     </div>
+     <p class="font-medium text-lg">People</p>
+      </div>
+       <button class="font-medium p-2 px-8 mt-3 rounded-lg border-2  hover:text-white hover:bg-blue-950  transition duration-500">6 Open Positions</button>
+    </div>
+
+    <div class="bg-white rounded-xl p-5 py-10 shadow-xl Design gridElement  items-center justify-center">
+      <div class="flex flex-row gap-2 items-center justify-center">
+     <div class="flex items-center justify-center bg-gradient-to-br from-blue-300 to-purple-200 p-2 rounded-lg">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" />
+      </svg>
+      
+     </div>
+     <p class="font-medium text-lg">Sales</p>
+      </div>
+       <button class="font-medium p-2 px-8 mt-3 rounded-lg border-2  hover:text-white hover:bg-blue-950  transition duration-500">7 Open Positions</button>
+    </div>
+
+
+    <div class="bg-white rounded-xl p-5 py-10 shadow-xl University gridElement  items-center justify-center">
+      <div class="flex flex-row gap-2 items-center justify-center">
+     <div class="flex items-center justify-center bg-gradient-to-br from-pink-200  to-blue-300 p-2 rounded-lg">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+      </svg>
+      
+      
+     </div>
+     <p class="font-medium text-lg">University</p>
+      </div>
+       <button class="font-medium p-2 px-8 mt-3 rounded-lg border-2  hover:text-white hover:bg-blue-950  transition duration-500">7 Open Positions</button>
+    </div>
+    
+    
+   </div>
+   <div class="p-5 lg:w-3/6 text-center text-slate-600 font-medium mt-5">
+    We are proud to be an equal opportunity employer that values diversity.We not discriminate on the basis of race,religion,color,national,origin,gender,sexual orientation,age,marital status,veteran status or disability status.
+   </div>
+  </body>
+</html>
