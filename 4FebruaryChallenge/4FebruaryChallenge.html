@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="config4.js" defer></script>
+    <title>Document</title>
+  
+    <style>
+        *,*::before,*::after{
+            box-sizing: border-box;
+        }
+
+    body::before{
+        position: absolute;
+  content: "";
+  width: 30%;
+  height: 80%;
+  display: flex;
+  z-index: 0;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: rgb(255, 255, 255);
+  transition: all 0.5s;
+   top: 0;
+  left: 0;
+  border-radius: 0 25%  25% 25px;
+  animation: scale-up 0.5s ease-in  ;
+  
+    }
+
+   @keyframes scale-up{
+    from{
+        
+        opacity: 0;
+        transform: scale(0) 
+    }
+    to{
+       
+        opacity: 1;
+        transform: scale(1) 
+    }
+   }
+
+
+   svg {
+max-inline-size: 100%;
+block-size: auto;
+}
+
+.meter-circle .background {
+stroke: #e2e1ee;
+}
+
+.meter-circle .value {
+stroke:  #f84943;
+stroke-linecap: round;
+}
+
+  @media screen and (max-width: 900px) {
+     body::before{
+        height:30%;
+        width: 50%;
+     }
+  }
+
+  .active{
+    opacity:1;
+    transition: all 0.5s ease;
+translate: 10% -10px 5rem;
+}
+
+
+
+    </style>
+</head>
+<body class="bg-red-500  flex items-center justify-center min-h-screen">
+  <div class="flex flex-col items-center justify-center gap-8">
+    <div class="bg-white z-20 p-3 w-fit flex flex-row gap-5 rounded-xl HomeButton">
+        <div class="flex flex-col read  items-center justify-center group hover:text-white transition hover:bg-red-500 p-3 rounded-full duration-500 hover:font-medium active:bg-red-500 focus:bg-red-500"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 ">
+         <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+         <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+       </svg>
+       <p class=" group-hover:hidden transition duration-500">Home</p>
+       </div>
+
+  </div>
+    <div class="home bg-white p-5 rounded-xl opacity-0">
+      <svg class="meter-circle animate-spin" width="60" height="60" viewBox="0 0 260 260" fill="none" stroke-width="20" class="">
+        <path stroke="#0002" class="background" d="M130 10a120 120 0 1 1 0 240 120 120 0 0 1 0-240" />
+        <path stroke="#000" class="value" stroke-dasharray="754.09 754.09" stroke-dashoffset="565.57" d="M130 10a120 120 0 1 1 0 240 120 120 0 0 1 0-240" />
+        </svg>
+    </div>
+   </div>
+</body>
+</html>
