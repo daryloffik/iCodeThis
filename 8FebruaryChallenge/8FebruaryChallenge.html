@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="config8.js" defer></script>
+    <title>Document</title>
+    <style>
+    *,*::before,*::after{
+        box-sizing: border-box;
+    }
+
+    h2{
+        animation: fade 1s ease-in 0.4s forwards;
+      
+    }
+    @keyframes fade {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+
+    .mission{
+        transform: translateX(-22rem);
+        animation: slide-in 1s ease-in-out 1s forwards ;
+    }
+
+    @keyframes slide-in {
+        from{
+           transform: translateX(-22rem);
+        }
+        to{
+            transform: translateX(0px);
+        }
+    }
+
+    button{
+        z-index: 1;
+
+
+position: relative;
+
+
+transition: all 250ms;
+overflow: hidden;
+    }
+
+
+ button:hover::before {
+width: 100%;
+
+}
+
+button::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 0;
+background-color: #000000;
+
+z-index: -1;
+
+transition: all 250ms
+}
+
+
+.active{
+   
+        animation: slide-out 1s ease-in-out 0.4s forwards;
+    }
+
+    @keyframes slide-out{
+        from{
+           
+            transform: translateX(0px);
+        }
+        to{
+            transform: translateX(-120rem);
+        }
+    }
+
+
+    .scaled{
+        opacity: 0;
+   animation: scale-up 0.8s ease-in-out forwards 4s;
+}
+
+@keyframes scale-up {
+    from {
+        opacity: 0;
+     
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.groups{
+    display: grid;
+    place-content: center;
+}
+
+.groups>*{
+    grid-area: 1/1;
+}
+    
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-slate-200">
+    <div class="bg-slate-100 groups  rounded-lg overflow-hidden ">
+   <div class="py-14 p-12 border-r-pink-200 border-r-8 first z-20 bg-slate-100">
+    <h2 class="font-medium tracking-wide text-2xl">Keep it sporty.</h2> 
+    <p class="text-wrap py-2 text-sm font-medium mission">Our mission is to change the world through<br> sport.Browse sportswear and shoes</p>
+    <button class="border-black border-2 m-2 mission hover:text-pink-300 p-3 view">View Collection</button>
+   </div>
+   <div class="second flex flex-row gap-12  z-10">
+    <img src="https://ledubaimall.com/wp-content/uploads/2019/12/shoes-e1576250489507.jpg" alt="" srcset="" class=" h-72 scaled ">
+    <div class="relative w-64  ">
+        <p class="absolute top-1 right-1 p-3 rounded-lg bg-pink-200 text-white scaled ">Sold out</p><br>
+       <div class="mt-20 font-medium scaled ">
+        <p class="text-xl">Air monarch</p>
+        <p class="text-3xl">345$</p>
+       </div>
+    </div>
+   </div>
+    </div>
+</body>
+</html>
