@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="config9.js" defer></script>
+    <style>
+           *,*::before,*::after{
+        box-sizing: border-box;
+    }
+
+          .scaled{
+        opacity: 0;
+   animation: scale-up 0.8s ease-in-out forwards ;
+}
+
+.scaled1{
+        opacity: 0;
+   animation: scale-up 0.8s ease-in-out forwards 0.8s;
+}
+
+@keyframes scale-up {
+    from {
+        opacity: 0;
+     
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.bordered{
+    transition: all 250ms;
+    border: 5px solid rgb(15, 15, 87);
+    border-radius: 10px;
+}
+
+.text{
+    transition: ease-out 0.5s;
+}
+
+button{
+    z-index: 1;
+    position: relative;
+    transition: all 250ms;
+    overflow: hidden;
+}
+
+button:hover::before {
+    width: 100%;
+
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+
+    background-color: #0e0e4e;
+    z-index: -1;
+
+    transition: all 250ms
+}
+
+    </style>
+    <title>Document</title>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-slate-200">
+    <div class="flex flex-col text-center items-center justify-center scaled home p-10 bg-white">
+      <h4 class="font-medium mt-3">Search for statistics</h4>
+      <div class="border-2 p-2 flex flex-row mt-3  cursor-pointer lg:w-[506px] ">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 stroke-gray-200">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          </svg>
+          <input type="text" name="Search" id="" placeholder="Enter any keyword" class="focus:outline-none">
+        
+      </div>
+      <div class="w-full md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 flex flex-col gap-8 mt-8 scaled1">
+        <div class="bg-slate-200 p-6 flex flex-col items-start justify-start font-medium rounded-lg">
+         <h4 class="text-lg mb-2">Price Calculator</h4>
+         <p class="text-start text-sm">How much does 1 Eur in 1963 equal<br>in today's prices?Adjust the rent?</p><br>
+   <button class="flex flex-row mt-4 p-2 border-2 border-gray-300 rounded-full group transition duration-500 items-center w-full justify-center hover:transition hover:duration-500">
+    <p class="group-hover:text-white group-hover:mr-2 transition duration-500 text ">Calculate price changes</p>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 group-hover:text-white hidden group-hover:inline transition duration-500">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+      </svg>
+      
+   </button>
+
+        </div>
+        <div class="bg-pink-100 p-6 flex flex-col items-start jusitfy-start font-medium rounded-lg">
+            <h4 class="text-lg mb-2">Name statistics</h4>
+            <p class="text-start text-sm">How much does 1 Eur in 1963 equal<br>in today's prices?Adjust the rent?</p><br>
+      <button class="flex flex-row mt-4 p-2 border-2 border-gray-300 rounded-full group transition duration-500 items-center w-full justify-center hover:transition hover:duration-500">
+       <p class="group-hover:text-white group-hover:mr-2 transition duration-500 text ">Search by name</p>
+       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 group-hover:text-white hidden group-hover:inline transition duration-500">
+           <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+         </svg>
+         
+      </button>
+      
+           </div>
+           <div class="bg-pink-200 p-6 flex flex-col items-start jusitfy-start font-medium rounded-lg">
+            <h4 class="text-lg mb-2">Stats <table></table></h4>
+            <p class="text-start text-sm">Find detailed table with time and<br>create your own</p><br>
+      <button class="flex flex-row mt-4 p-2 border-2 border-gray-300 rounded-full group transition duration-500 items-center w-full justify-center hover:transition hover:duration-500">
+       <p class="group-hover:text-white group-hover:mr-2 transition duration-500 text "> Go to tables</p>
+       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 group-hover:text-white hidden group-hover:inline transition duration-500">
+           <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+         </svg>
+         
+      </button>
+      
+           </div>
+           <div class=" p-6 flex flex-col items-start jusitfy-start font-medium rounded-lg">
+            <h4 class="text-lg mb-2">Calendar <table></table></h4>
+            <p class="text-start text-sm">See the advance release of<br>calendar in 2021</p><br>
+       <p class="hover:text-blue-950 hover:mr-2 mt-4 transition duration-500 text underline decoration-sky-500 text-sky-500 hover:decoration-blue-950 cursor-pointer"> Go to tables</p>
+           </div>
+        <div class=" p-6 flex flex-col items-start jusitfy-start font-medium rounded-lg">
+         <h4 class="text-lg mb-2">Subscribe to news <table></table></h4>
+         <p class="text-start text-sm">Get the latest statistics releases <br>and publication by email</p><br>
+    <p class="hover:text-blue-950 hover:mr-2 mt-4 transition duration-500 text underline decoration-sky-500 text-sky-500 hover:decoration-blue-950 cursor-pointer">Receive E-mail alerts</p>
+        </div>
+        <div class=" p-6 flex flex-col items-start jusitfy-start font-medium rounded-lg">
+            <h4 class="text-lg mb-2">API <table></table></h4>
+            <p class="text-start text-sm">Easily retrieve and integrate <br> statistics with your own system</p><br>
+       <p class="hover:text-blue-950 hover:mr-2 mt-4 transition duration-500 text underline decoration-sky-500 text-sky-500 hover:decoration-blue-950 cursor-pointer">Open API</p>
+           </div>
+    </div>
+</body>
+</html>
