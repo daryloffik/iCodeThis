@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="config10.js" defer></script>
+    <title>Document</title>
+    <style>
+    *,*::before,*::before{
+        box-sizing: border-box;
+    }
+    *{
+        color: rgb(16, 16, 71);
+        font-weight: 500;
+    }
+
+    .slided-in{
+    transform: translateY(-12rem);
+        animation: slide-in 1s ease-in-out forwards ;
+    }
+
+    @keyframes slide-in {
+        from{
+           transform: translateY(-12rem);
+        }
+        to{
+            transform: translateX(0px);
+        }
+    }
+
+
+button:hover::before {
+width: 100%;
+
+}
+button:hover{
+    color: aliceblue;
+transition: all 250ms
+}
+
+button::before {
+content: "";
+position: absolute;
+bottom: 0;
+left: 0;
+height: 100%;
+width: 0;
+background-color: rgb(16, 16, 71);
+
+z-index: -1;
+
+transition: all 250ms
+}
+
+
+
+button{
+z-index: 1;
+
+position: relative;
+
+
+transition: all 250ms;
+overflow: hidden;
+}
+
+.scaled{
+        opacity: 0;
+   animation: scale-up 0.8s ease-in-out forwards ;
+}
+
+.scaled1{
+        opacity: 0;
+   animation: scale-up 0.8s ease-in-out forwards 0.8s;
+}
+
+@keyframes scale-up {
+    from {
+        opacity: 0;
+     
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+    </style>
+   
+</head>
+<body class="flex items-center justify-center bg-slate-200 min-h-screen">
+    <div class="bg-white rounded-lg shadow-lg flex flex-col items-center justify-center p-10 scaled overflow-hidden">
+     <div class="border-2 rounded-full flex flex-col items-center justify-center p-5 px-6 scaled1 offer overflow-hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 slided-in">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z" />
+          </svg>   
+          <p class="text-[12px] tracking-wide slided-in">SAMPLE</p>     
+     </div>
+     <div class="mt-2 scaled1 ">
+        <span class="text-sm  ">KR</span><span class="text-3xl font-extrabold price slided-in">100</span><br> 
+        <span class="text-sm">NOK/MONTH</span>
+     </div>
+     <div class="flex flex-row gap-2 mt-3 p-1 scaled1">
+        <button class="p-2 px-5  rounded-xl border-2 border-blue-950 w-full">10</button>
+        <button class="p-2  px-5 rounded-xl border-2 border-blue-950 w-full">25</button>
+        <button class="p-2  px-5 rounded-xl border-2 border-blue-950 w-full">50</button>
+        <button class="p-2  px-5 rounded-xl border-2 border-blue-950 w-full">100</button>
+     </div>
+     <p class="text-sm m-2 scaled1">Downloads per month</p>
+     <button class="p-5 px-5  rounded-xl border-2 border-blue-950 w-full shadow-xl scaled1">
+        Subscribe
+     </button>
+    </div>
+</body>
+</html>
