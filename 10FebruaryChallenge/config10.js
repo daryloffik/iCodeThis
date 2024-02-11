@@ -1,7 +1,7 @@
 function changePrice(){
-    buttons =document.querySelectorAll("button")
-    offer = document.querySelector(".offer")
-    price = document.querySelector(".price") 
+    let buttons =document.querySelectorAll("button")
+    let offer = document.querySelector(".offer")
+let price = document.querySelector(".price") 
     buttons.forEach(button => {
         button.addEventListener("click",()=> {
         switch(button.innerText){
